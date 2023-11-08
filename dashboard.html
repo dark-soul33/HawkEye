@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Attendance Management System</title>
+    <link rel="stylesheet" href="dashboard.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Attendance Management System</h1>
+    </header>
+
+    <main>
+      <div class="pg1">
+        <div class="main1">
+          <div class="upload-container">
+            <h2>Upload a Photo</h2>
+            <input type="file" id="photo-upload" accept="image/*" multiple />
+            <button id="analyze-button">Analyze</button>
+          </div>
+
+          <div class="results-container">
+            <h2>Attendance Results</h2>
+            <table>
+              <thead>
+                <tr>
+                  <th>Student Name</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody id="attendance-table">
+                <!-- Table rows will be generated here after analysis -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="pie">
+          <canvas id="attendance-pie-chart"></canvas>
+        </div>
+      </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="dashboard.js"></script>
+  </body>
+</html>
